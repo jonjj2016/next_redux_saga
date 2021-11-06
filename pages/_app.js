@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+import React from "react"
+import NextNprogress from 'nextjs-progressbar';
+import  wrapper from "../store/store";
+import 'semantic-ui-css/semantic.min.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
 
-export default MyApp
+const MyApp = ({ Component, pageProps}) => (
+    <Component {...pageProps} />
+)
+
+export default wrapper.withRedux(MyApp);
